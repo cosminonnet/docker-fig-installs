@@ -20,11 +20,8 @@ Topology
 
 ### QuickStart
 
-To launch GitLab
-
 <pre>
-cd gitlab
-fig up -d
+fig up -d gitlab
 </pre>
 
 Login using the default username and password:
@@ -42,20 +39,21 @@ Usable Containers
 
 |ID           |Container                                                                                                  |App Version    |Size   |
 |-------------|-----------------------------------------------------------------------------------------------------------|:-------------:|------:|
-|jenkins      |[![Badge](http://dockeri.co/image/aespinosa/jenkins)](https://github.com/aespinosa/docker-jenkins)         |latest `v1.581`|471.3MB|
+|jenkins      |[![Badge](http://dockeri.co/image/aespinosa/jenkins)](https://registry.hub.docker.com/u/aespinosa/jenkins/)|latest `v1.583`|471.3MB|
 
-Topology
 
-|Service               |Workers     |
-|--------------------  |------------|
-|jenkins               |            |
-
-### QuickStart Latest
-
-To launch the *latest* Jenkins version run:
+Configuration
 
 <pre>
-cd jenkins
+jenkins:
+  image: aespinosa/jenkins:latest
+  ports:
+    - "8080:8080"
+</pre>
+
+### QuickStart
+
+<pre>
 fig up -d jenkins
 </pre>
 
