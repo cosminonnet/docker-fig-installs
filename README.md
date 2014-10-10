@@ -6,7 +6,7 @@ Containers
 
 |ID           |Docker Image                                                                                                 |GitHub                                                                    |Version         |Size   |
 |:-----------:|:-----------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------:|:--------------:|:-----:|
-|registry     |[![Badge](http://dockeri.co/image/library/registry)](https://registry.hub.docker.com/u/library/registry/)    |[docker-registry](https://github.com/docker/docker-registry)              |latest  `0.8.1` |425.1MB|
+|registry     |[![Badge](http://dockeri.co/image/library/registry)](https://registry.hub.docker.com/u/library/registry/)    |[docker-registry](https://github.com/docker/docker-registry)              |`latest` `0.8.1`|425.1MB|
 
 Configuration
 
@@ -66,9 +66,9 @@ Login using the default username and password:
 
 Containers
 
-|ID           |Container                                                                                                  |App Version    |Size   |
-|-------------|-----------------------------------------------------------------------------------------------------------|:-------------:|------:|
-|jenkins      |[![Badge](http://dockeri.co/image/aespinosa/jenkins)](https://registry.hub.docker.com/u/aespinosa/jenkins/)|latest `v1.583`|471.3MB|
+|ID           |Docker Image                                                                                                 |GitHub                                                                    |Version         |Size   |
+|:-----------:|:-----------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------:|:--------------:|:-----:|
+|jenkins      |[![Badge](http://dockeri.co/image/aespinosa/jenkins)](https://registry.hub.docker.com/u/aespinosa/jenkins/)  |[docker-jenkins](https://github.com/aespinosa/docker-jenkins)             |`latest`        |461.3MB|
 
 Configuration
 
