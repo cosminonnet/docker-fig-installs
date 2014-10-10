@@ -66,19 +66,20 @@ Login using the default username and password:
 
 Containers
 
-|ID           |Docker Image                                                                                                 |GitHub                                                                    |Version         |Size   |
-|:-----------:|:-----------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------:|:--------------:|:-----:|
-|jenkins      |[![Badge](http://dockeri.co/image/aespinosa/jenkins)](https://registry.hub.docker.com/u/aespinosa/jenkins/)  |[docker-jenkins](https://github.com/aespinosa/docker-jenkins)             |`latest`        |461.3MB|
+|ID           |Docker Image                                                                                                 |GitHub                                                                      |Version            |Size   |
+|:-----------:|:-----------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------:|:-----------------:|:-----:|
+|jenkins      |[![Badge](http://dockeri.co/image/_/jenkins)](https://registry.hub.docker.com/_/jenkins/)                    |[jenkins-ci.org-docker](https://github.com/cloudbees/jenkins-ci.org-docker) |`latest` `1.565.3` |659.0MB|
 
 Configuration
 
 <pre>
 jenkins:
-  image: aespinosa/jenkins:latest
+  image: jenkins:1.565.3
   ports:
     - "8080:8080"
+    - "50000:50000"
   volumes:
-    - /var/docker-data/jenkins:/jenkins
+    - /var/docker-data/jenkins:/var/jenkins_home
 </pre>
 
 Start

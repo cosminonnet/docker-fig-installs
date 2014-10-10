@@ -1,6 +1,7 @@
 jenkins:
-  image: aespinosa/jenkins:latest
+  image: jenkins:1.565.3
   ports:
     - "8080:8080"
+    - "50000:50000"
   volumes:
-    - /var/docker-data/jenkins:/jenkins
+    - /var/docker-data/jenkins:/var/jenkins_home
