@@ -1,3 +1,32 @@
+# Docker Registry (https://github.com/docker/docker-registry)
+
+> Registry server for Docker (hosting/delivering of repositories and images)
+
+Usable Containers
+
+|ID           |Container                                                                                                  |App Version    |Size   |
+|-------------|-----------------------------------------------------------------------------------------------------------|:-------------:|------:|
+|jenkins      |[![Badge](http://dockeri.co/image/library/registry)](https://registry.hub.docker.com/u/library/registry/) |latest `v1.583`|471.3MB|
+
+Configuration
+
+<pre>
+registry:
+  image: registry
+  ports:
+    - "5000:5000"
+  volumes:
+    - /opt/registry:/tmp/registry
+</pre>
+
+QuickStart
+
+<pre>
+fig up -d registry
+</pre>
+
+
+
 # GitLab
 
 > [GitLab](https://about.gitlab.com/) offers git repository management, code reviews, issue tracking, activity feeds, wikis.

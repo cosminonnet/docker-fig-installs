@@ -1,3 +1,10 @@
+registry:
+  image: registry
+  ports:
+    - "5000:5000"
+  volumes:
+    - /opt/registry:/tmp/registry
+
 jenkins:
   image: aespinosa/jenkins:latest
   ports:
