@@ -1,6 +1,6 @@
-# Docker Registry (https://github.com/docker/docker-registry)
+# [Docker Registry](https://github.com/docker/docker-registry)
 
-> Registry server for Docker (hosting/delivering of repositories and images)
+> Registry server for Docker (hosting/delivering of repositories and images).
 
 Usable Containers
 
@@ -27,9 +27,9 @@ fig up -d registry
 
 
 
-# GitLab
+# [GitLab](https://about.gitlab.com/)
 
-> [GitLab](https://about.gitlab.com/) offers git repository management, code reviews, issue tracking, activity feeds, wikis.
+> Offers git repository management, code reviews, issue tracking, activity feeds, wikis.
 
 Usable Containers
 
@@ -60,9 +60,9 @@ Login using the default username and password:
 
 
 
-# Jenkins
+# [Jenkins](http://jenkins-ci.org/)
 
-> [Jenkins](http://jenkins-ci.org/) An extendable open source continuous integration server
+> An extendable open source continuous integration server.
 
 Usable Containers
 
