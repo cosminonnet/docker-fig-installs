@@ -39,9 +39,7 @@ Containers
 |postgresql   |[![Badge](http://dockeri.co/image/sameersbn/postgresql)](https://registry.hub.docker.com/u/sameersbn/postgresql/)|[docker-postgresql](https://github.com/sameersbn/docker-postgresql)         |`latest`           |142.1MB|
 |redis        |[![Badge](http://dockeri.co/image/sameersbn/redis)](https://registry.hub.docker.com/u/sameersbn/redis/)          |[docker-redis](https://github.com/sameersbn/docker-redis)                   |`latest`           |203.2MB|
 
-
-
-Start
+Configuration
 
 <pre>
 gitlab:
@@ -74,6 +72,12 @@ redis:
   image: sameersbn/redis:latest
   volumes:
     - /var/docker-data/redis:/var/lib/redis
+</pre>
+
+Start
+
+<pre>
+fig up -d gitlab
 </pre>
 
 Login using the default username and password:
