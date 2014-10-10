@@ -16,7 +16,7 @@ registry:
   ports:
     - "5000:5000"
   volumes:
-    - /opt/registry:/tmp/registry
+    - /var/docker-data/registry:/tmp/registry
 </pre>
 
 Start
@@ -77,6 +77,8 @@ jenkins:
   image: aespinosa/jenkins:latest
   ports:
     - "8080:8080"
+  volumes:
+    - /var/docker-data/jenkins:/jenkins
 </pre>
 
 Start
