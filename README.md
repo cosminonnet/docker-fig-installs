@@ -2,7 +2,7 @@
 
 > Registry server for Docker (hosting/delivering of repositories and images).
 
-Usable Containers
+Containers
 
 |ID           |Container                                                                                                  |GitHub                                                                      |App Version    |Size   |
 |-------------|-----------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------:|:-------------:|------:|
@@ -19,7 +19,7 @@ registry:
     - /opt/registry:/tmp/registry
 </pre>
 
-QuickStart
+Start
 
 <pre>
 fig up -d registry
@@ -31,7 +31,7 @@ fig up -d registry
 
 > Offers git repository management, code reviews, issue tracking, activity feeds, wikis.
 
-Usable Containers
+Containers
 
 |ID        |Container                                                                                                |App Version    |Size   |
 |----------|---------------------------------------------------------------------------------------------------------|:-------------:|------:|
@@ -47,7 +47,7 @@ Topology
 | &#x2937; postgresql|          |     |
 | &#x2937; redis     |          |     |
 
-QuickStart
+Start
 
 <pre>
 fig up -d gitlab
@@ -64,7 +64,7 @@ Login using the default username and password:
 
 > An extendable open source continuous integration server.
 
-Usable Containers
+Containers
 
 |ID           |Container                                                                                                  |App Version    |Size   |
 |-------------|-----------------------------------------------------------------------------------------------------------|:-------------:|------:|
@@ -79,7 +79,7 @@ jenkins:
     - "8080:8080"
 </pre>
 
-QuickStart
+Start
 
 <pre>
 fig up -d jenkins
