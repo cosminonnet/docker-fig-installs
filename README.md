@@ -4,15 +4,15 @@
 
 Usable Containers
 
-|ID           |Container                                                                                                  |App Version    |Size   |
-|-------------|-----------------------------------------------------------------------------------------------------------|:-------------:|------:|
-|jenkins      |[![Badge](http://dockeri.co/image/library/registry)](https://registry.hub.docker.com/u/library/registry/) |latest `v1.583`|471.3MB|
+|ID           |Container                                                                                                  |GitHub                                                                      |App Version    |Size   |
+|-------------|-----------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------:|:-------------:|------:|
+|jenkins      |[![Badge](http://dockeri.co/image/library/registry)](https://registry.hub.docker.com/u/library/registry/)  |[docker/docker-registry](https://github.com/docker/docker-registry)         |latest `v0.8.1`|425.1MB|
 
 Configuration
 
 <pre>
 registry:
-  image: registry
+  image: registry:0.8.1
   ports:
     - "5000:5000"
   volumes:
