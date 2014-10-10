@@ -18,7 +18,7 @@ Topology
 | &#x2937; postgresql|          |     |
 | &#x2937; redis     |          |     |
 
-### QuickStart
+QuickStart
 
 <pre>
 fig up -d gitlab
@@ -41,7 +41,6 @@ Usable Containers
 |-------------|-----------------------------------------------------------------------------------------------------------|:-------------:|------:|
 |jenkins      |[![Badge](http://dockeri.co/image/aespinosa/jenkins)](https://registry.hub.docker.com/u/aespinosa/jenkins/)|latest `v1.583`|471.3MB|
 
-
 Configuration
 
 <pre>
@@ -51,7 +50,7 @@ jenkins:
     - "8080:8080"
 </pre>
 
-### QuickStart
+QuickStart
 
 <pre>
 fig up -d jenkins
