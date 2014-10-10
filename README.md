@@ -42,19 +42,13 @@ Usable Containers
 
 |ID           |Container                                                                                                  |App Version    |Size   |
 |-------------|-----------------------------------------------------------------------------------------------------------|:-------------:|------:|
-|jenkinsLatest|[![Badge](http://dockeri.co/image/aespinosa/jenkins)](https://github.com/aespinosa/docker-jenkins)         |latest `v1.581`|471.3MB|
-|jenkinsLTS   |[![Badge](http://dockeri.co/image/_/jenkins)](https://registry.hub.docker.com/_/jenkins/)                  |LTS `v1.565.2` |  699MB|
-|jenkinsHarbur|[![Docker Repository on Quay.io](http://img.shields.io/badge/container-quay.io%2Fharbur%2Fjenkins-blue.svg)](http://docs.harbur.io/en/latest/applications/jenkins/index.html)[]()|latest `v1.581`|  548MB|
-|jenkinsSlave |[![Badge](http://dockeri.co/image/spiddy/dind-jenkins-slave)](https://github.com/spiddy/dind-jenkins-slave)|-              |891.5MB|
+|jenkins      |[![Badge](http://dockeri.co/image/aespinosa/jenkins)](https://github.com/aespinosa/docker-jenkins)         |latest `v1.581`|471.3MB|
 
 Topology
 
 |Service               |Workers     |
 |--------------------  |------------|
-|jenkinsLatest         |jenkinsSlave|
-|jenkinsLTS            |            |
-|jenkinsHarbur         |            |
-| &#x2937; jenkinsSlave|            |
+|jenkins               |            |
 
 ### QuickStart Latest
 
@@ -62,20 +56,7 @@ To launch the *latest* Jenkins version run:
 
 <pre>
 cd jenkins
-fig up -d jenkinsLatest
-echo "Jenkins can be accessed at: $(docker port jenkins_jenkinsLatest_1 8080)"
-</pre>
-
-Jenkins is by default unsecured. Make sure to go to `Manage Jenkins - Setup Security` to configure your security.
-
-### QuickStart LTS
-
-To launch the *LTS* Jenkins version run:
-
-<pre>
-cd jenkins
-fig up -d jenkinsLTS
-echo "Jenkins can be accessed at: $(docker port jenkins_jenkinsLTS_1 8080)"
+fig up -d jenkins
 </pre>
 
 Jenkins is by default unsecured. Make sure to go to `Manage Jenkins - Setup Security` to configure your security.
