@@ -6,7 +6,7 @@ Usable Containers
 
 |ID           |Container                                                                                                  |GitHub                                                                      |App Version    |Size   |
 |-------------|-----------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------:|:-------------:|------:|
-|jenkins      |[![Badge](http://dockeri.co/image/library/registry)](https://registry.hub.docker.com/u/library/registry/)  |[docker/docker-registry](https://github.com/docker/docker-registry)         |latest `v0.8.1`|425.1MB|
+|jenkins      |[![Badge](http://dockeri.co/image/library/registry)](https://registry.hub.docker.com/u/library/registry/)  |[docker-registry](https://github.com/docker/docker-registry)         |latest  `0.8.1`|425.1MB|
 
 Configuration
 
