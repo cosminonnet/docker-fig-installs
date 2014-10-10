@@ -33,24 +33,47 @@ fig up -d registry
 
 Containers
 
-|ID        |Container                                                                                                |App Version    |Size   |
-|----------|---------------------------------------------------------------------------------------------------------|:-------------:|------:|
-|gitlab    |[![Badge](http://dockeri.co/image/sameersbn/gitlab)](https://github.com/sameersbn/docker-gitlab)         |`v7.3.1-3`     |729.5MB|
-|postgresql|[![Badge](http://dockeri.co/image/orchardup/postgresql)](https://github.com/orchardup/docker-postgresql) |latest         |488.6MB|
-|redis     |[![Badge](http://dockeri.co/image/_/redis)](https://registry.hub.docker.com/_/redis/)                    |`v2.8.9`       | 98.7MB|
+|ID           |Docker Image                                                                                                     |GitHub                                                                      |Version            |Size   |
+|:-----------:|:---------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------:|:-----------------:|:-----:|
+|gitlab       |[![Badge](http://dockeri.co/image/sameersbn/gitlab)](https://registry.hub.docker.com/u/sameersbn/gitlab/)        |[docker-gitlab](https://github.com/sameersbn/docker-gitlab)                 |`latest` `7.3.2-1` |659.0MB|
+|postgresql   |[![Badge](http://dockeri.co/image/sameersbn/postgresql)](https://registry.hub.docker.com/u/sameersbn/postgresql/)|[docker-postgresql](https://github.com/sameersbn/docker-postgresql)         |`latest`           |142.1MB|
+|redis        |[![Badge](http://dockeri.co/image/sameersbn/redis)](https://registry.hub.docker.com/u/sameersbn/redis/)          |[docker-redis](https://github.com/sameersbn/docker-redis)                   |`latest`           |203.2MB|
 
-Topology
 
-|Service             |Database  |Redis|
-|--------------------|----------|-----|
-|gitlab              |postgresql|redis|
-| &#x2937; postgresql|          |     |
-| &#x2937; redis     |          |     |
 
 Start
 
 <pre>
-fig up -d gitlab
+gitlab:
+  image: sameersbn/gitlab:7.3.2-1
+  ports:
+    - "22:22"
+    - "80:80"
+  environment:
+    - GITLAB_PORT=80
+    - GITLAB_SSH_PORT=22
+    - SSL_SELF_SIGNED=true
+  volumes:
+    - /var/run/docker.sock:/run/docker.sock
+    - $(which docker):/bin/docker
+    - /var/docker-data/gitlab:/home/git/data
+  links:
+    - postgresql:postgresql
+    - redis:redisio
+
+postgresql:
+  image: sameersbn/postgresql:latest
+  environment:
+      - DB_NAME=gitlabhq_production
+      - DB_USER=gitlab
+      - DB_PASS=password
+  volumes:
+    - /var/docker-data/postgresql:/var/lib/postgresql
+
+redis:
+  image: sameersbn/redis:latest
+  volumes:
+    - /var/docker-data/redis:/var/lib/redis
 </pre>
 
 Login using the default username and password:
