@@ -4,9 +4,9 @@
 
 Containers
 
-|ID           |Docker Image                                                                                               |GitHub                                                                      |Version        |Size   |
-|-------------|-----------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------:|:-------------:|------:|
-|registry     |[![Badge](http://dockeri.co/image/library/registry)](https://registry.hub.docker.com/u/library/registry/)  |[docker-registry](https://github.com/docker/docker-registry)         |latest  `0.8.1`|425.1MB|
+|ID           |Docker Image                                                                                               |GitHub                                                                    |Version        |Size   |
+|-------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|---------------|-------|
+|registry     |[![Badge](http://dockeri.co/image/library/registry)](https://registry.hub.docker.com/u/library/registry/)  |[docker-registry](https://github.com/docker/docker-registry)              |latest  `0.8.1`|425.1MB|
 
 Configuration
 
