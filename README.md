@@ -68,8 +68,6 @@ echo "Jenkins can be accessed at: $(docker port jenkins_jenkinsLatest_1 8080)"
 
 Jenkins is by default unsecured. Make sure to go to `Manage Jenkins - Setup Security` to configure your security.
 
-![Jenkins Latest](https://raw.githubusercontent.com/harbur/docker-sdlc/master/images/JenkinsLatest.png "Jenkins Latest")
-
 ### QuickStart LTS
 
 To launch the *LTS* Jenkins version run:
@@ -81,9 +79,3 @@ echo "Jenkins can be accessed at: $(docker port jenkins_jenkinsLTS_1 8080)"
 </pre>
 
 Jenkins is by default unsecured. Make sure to go to `Manage Jenkins - Setup Security` to configure your security.
-
-![Jenkins LTS](https://raw.githubusercontent.com/harbur/docker-sdlc/master/images/JenkinsLTS.png "Jenkins LTS")
-
-Current LTS Issues:
-
-* [Failed to listen to incoming slave connection](https://github.com/cloudbees/jenkins-ci.org-docker/issues/6)
