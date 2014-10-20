@@ -45,12 +45,12 @@ Configuration
 gitlab:
   image: sameersbn/gitlab:7.3.2-1
   ports:
-    - "22:22"
-    - "80:80"
+    - "10022:22"
   environment:
-    - GITLAB_PORT=80
-    - GITLAB_SSH_PORT=22
+    - GITLAB_SSH_PORT=10022
     - SSL_SELF_SIGNED=true
+    - VIRTUAL_HOST=gitlab.server.com
+    - VIRTUAL_PORT=80
   volumes:
     - /var/run/docker.sock:/run/docker.sock
     - $(which docker):/bin/docker
@@ -102,9 +102,9 @@ Configuration
 <pre>
 jenkins:
   image: jenkins:1.565.3
-  ports:
-    - "8080:8080"
-    - "50000:50000"
+  environment:
+    - VIRTUAL_HOST=jenkins.server.com
+    - VIRTUAL_PORT=8080
   volumes:
     - /var/docker-data/jenkins:/var/jenkins_home
 </pre>
