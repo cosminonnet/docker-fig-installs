@@ -107,6 +107,7 @@ jenkins:
     - VIRTUAL_PORT=8080
   volumes:
     - /var/docker-data/jenkins:/var/jenkins_home
+  user: root
 </pre>
 
 Start
