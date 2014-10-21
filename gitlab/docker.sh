@@ -19,4 +19,4 @@ docker run --name=redis -d -v /var/docker-data/redis:/var/lib/redis sameersbn/re
 
 # 3. Install Gitlab Container /w Data Volume & SSL
 # ------------------------------------------------
-docker run --name='gitlab' -d -p 10022:22 -e 'GITLAB_HOST=gitlab.server.com' -e 'GITLAB_PORT=80' -e 'GITLAB_EMAIL=admin@server.com' -e 'GITLAB_SSH_PORT=10022' -e 'SSL_SELF_SIGNED=true' -e 'VIRTUAL_HOST=gitlab.server.com' -e 'VIRTUAL_PORT=80' -v /var/run/docker.sock:/run/docker.sock -v $(which docker):/bin/docker -v /var/docker-data/gitlab:/home/git/data --link postgresql:postgresql --link redis:redisio sameersbn/gitlab:7.3.2-1
+docker run --name='gitlab' -d -p 10022:22 -e 'GITLAB_HOST=gitlab.server.com' -e 'GITLAB_PORT=80' -e 'GITLAB_EMAIL=admin@server.com' -e 'GITLAB_SSH_PORT=10022' -e 'SSL_SELF_SIGNED=true' -e 'VIRTUAL_HOST=gitlab.server.com' -e 'VIRTUAL_PORT=80' -v /var/run/docker.sock:/run/docker.sock -v $(which docker):/bin/docker -v /var/docker-data/gitlab/data:/home/git/data -v /var/docker-data/gitlab/log:/var/log/gitlab --link postgresql:postgresql --link redis:redisio sameersbn/gitlab:7.3.2-1

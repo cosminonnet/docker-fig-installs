@@ -13,7 +13,8 @@ gitlab:
   volumes:
     - /var/run/docker.sock:/run/docker.sock
     - $(which docker):/bin/docker
-    - /var/docker-data/gitlab:/home/git/data
+    - /var/docker-data/gitlab/data:/home/git/data
+    - /var/docker-data/gitlab/log:/var/log/gitlab
   links:
     - postgresql:postgresql
     - redis:redisio
