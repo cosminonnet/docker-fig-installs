@@ -47,6 +47,9 @@ gitlab:
   ports:
     - "10022:22"
   environment:
+    - GITLAB_HOST=gitlab.server.com
+    - GITLAB_PORT=80
+    - GITLAB_EMAIL=admin@server.com
     - GITLAB_SSH_PORT=10022
     - SSL_SELF_SIGNED=true
     - VIRTUAL_HOST=gitlab.server.com
