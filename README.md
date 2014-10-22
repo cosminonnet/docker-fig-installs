@@ -1,3 +1,32 @@
+# [Nginx Proxy](https://github.com/jwilder/nginx-proxy)
+
+> Automated Nginx reverse proxy for docker containers.
+
+Containers
+
+|ID           |Docker Image                                                                                                    |GitHub                                                                    |Version         |Size   |
+|:-----------:|:--------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------:|:--------------:|:-----:|
+|nginx        |[![Badge](http://dockeri.co/image/jwilder/nginx-proxy)](https://registry.hub.docker.com/u/jwilder/nginx-proxy/) |[nginx-proxy](https://github.com/jwilder/nginx-proxy)                     |`latest`        |261.8MB|
+
+Configuration
+
+<pre>
+nginx:
+  image: jwilder/nginx-proxy
+  ports:
+    - "80:80"
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock
+</pre>
+
+Start
+
+<pre>
+fig up -d nginx
+</pre>
+
+
+
 # [Docker Registry](https://github.com/docker/docker-registry)
 
 > Registry server for Docker (hosting/delivering of repositories and images).
